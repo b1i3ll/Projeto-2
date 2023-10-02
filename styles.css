@@ -2,9 +2,10 @@
     --branco-principal: #FFFFFF;
     --cinza-seundario: #c0c0c0;
     --botao-azul: #167bf7;
-    --cor-de-fundo: linear-gradient( to right, #161a1d, #660708);
+    --cor-de-fundo: linear-gradient( to right, #ffff, #230000);
     --fonte-principal: 'inter';
     --fundo-questionario: #000000a2;
+    --cor-destaque: #000;
 }
 
 body{
@@ -18,12 +19,10 @@ body{
 *{
     margin: auto;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .principal{
-    background-image: url("img/Background.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     align-items: center;
     text-align: center;
 }
@@ -49,49 +48,40 @@ body{
     border: 2px solid var(--branco-principal);
 }
 
-.container__aviso{
-    font-size: 12px;
-    color: var(--cinza-seundario);
-
-}
-
 .container__titulo{
     font-size: 28px;
     font-weight: 700;
 }
 
-.container__imagem{
-    margin: 1em 0 2em 0;
+.frase-destaque{
+    color: var(--branco-principal);
+    font-size: 1.3em;
+    font-weight: 520;
+}
+
+.titulo-destaque{
+    color: var(--cor-destaque)
 }
 
 .container__caixa{
     margin: 0 6em;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.isadora-img{
+    width: 400px;
 }
 
 .flex{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 300px;
-}
-
-.txt-leads{
-    text-align: center;
-}
-
-.txt-leads h1{
-    color: var(--branco-principal);
-    font-size: 1.2em;
-    font-weight: 500;
-}
-
-.txt-leads img{
-    width: 320px;
-    margin: 60px 0;
+    gap: 439px;
 }
 
 .form{
-    width: 300px;
+    width: 270px;
     background-color: var(--fundo-questionario);
     border-radius: 20px;
     padding: 55px;
@@ -135,18 +125,11 @@ body{
     margin: 0 9em;
 }
 
-.descricao__titulo{
-    font-weight: 700;
-    font-size: 48px;
-    color: var(--branco-principal);
-    margin-bottom: 0.1em;
-}
-
 .bnt-enviar{
     text-align: center;
     margin-top: 40px;
 }
-
+ 
 .bnt-enviar input{
     width: 140px;
     height: 50px;
@@ -157,6 +140,10 @@ body{
     font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.txt.leads{
+    height: 100vh;
 }
 
 .descricao__texto{
@@ -214,17 +201,4 @@ body{
     margin: 1em 0;
     color: var(--cinza-secundario);
     font-size: 14px;
-}
-
-.lista__link a:hover {
-    color: var(--botao-azul);
-}
-
-.lista__link a:active {
-    color: purple;
-}
-
-.container__botao:hover {
-    background-color: var(--botao-azul-efeito);
-    color: var(--cor-de-fundo);
 }
